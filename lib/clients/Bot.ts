@@ -104,6 +104,7 @@ export default class BotClient extends Rocketchat {
       }
     }
     this.messages = await this.subscribeToMessages()
+    // @ts-ignore
     this.messages.onEvent(handler)
     // this.logger.info(`[driver] Added event handler for ${this.messages.name} subscription`)
   }

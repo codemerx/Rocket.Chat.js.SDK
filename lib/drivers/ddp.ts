@@ -511,11 +511,13 @@ export class DDPDriver extends EventEmitter implements ISocket, IDriver {
   }
 
   checkAndReopen = (): Promise<any> => {
+    // @ts-ignore
     return this.ddp.checkAndReopen()
   }
 
   subscribe = (topic: string, eventname: string, ...args: any[]): Promise<ISubscription> => {
     this.logger.info(`[DDP driver] Subscribing to ${topic} | ${JSON.stringify(args)}`)
+    // @ts-ignore
     return this.ddp.subscribe(topic, [eventname, { 'useCollection': false, 'args': args }])
   }
 

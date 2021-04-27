@@ -12,6 +12,7 @@ import {
 	ISubscription
 } from '../../interfaces'
 
+// @ts-ignore
 export default class LivechatClient extends LivechatRest implements ISocket {
   livechatStream: string = 'stream-livechat-room'
   userId: string = ''

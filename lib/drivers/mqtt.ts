@@ -12,6 +12,7 @@ import {
 	ICredentials
 } from '../../interfaces'
 
+// @ts-ignore
 export class MQTTDriver extends EventEmitter implements ISocket, IDriver {
   logger: ILogger
   config: ISocketOptions
